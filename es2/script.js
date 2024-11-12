@@ -29,8 +29,8 @@ for (let i = 0; i < team.length; i++) {
     const curTeamPoint = getRand();
 
     //Invece di assegnare il valore facevo push del risultato e incremendando l'array mi diventava un loop infinito
-    team[i].puntiFatti = curTeamPenal;
-    team[i].falliSubiti = curTeamPoint;
+    team[i].puntiFatti = curTeamPoint;
+    team[i].falliSubiti = curTeamPenal;
 
     newArray.push({ nome: curTeamName, falliSubiti: curTeamPenal });
 }

@@ -1,7 +1,7 @@
 const bici = [
     {
         nome: 'bmx',
-        peso: 40
+        peso: 4
     },
     {
         nome: 'enduro',
@@ -13,19 +13,20 @@ const bici = [
     }
 ];
 
-let lightBike = 100000;
 
+let lightBike = bici[0].peso;
+let message = '';
 for (let i = 0; i < bici.length; i++) {
     const curBici = bici[i];
 
     const curBiciName = curBici.nome;
     const curBiciWeigth = curBici.peso;
 
-    if (lightBike > curBiciWeigth) {
+    if (lightBike >= curBiciWeigth) {
         lightBike = curBiciWeigth;
-
-        console.log(`La bici più leggera è: ${curBiciName}, peso: ${curBiciWeigth}`);
+        message = (`La bici più leggera è: ${curBiciName}, peso: ${curBiciWeigth}`);
     }
 
 }
 
+console.log(message);
